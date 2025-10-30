@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y \
     mysql-server \
     && rm -rf /var/lib/apt/lists/*
 
-RUN echo "CREATE USER 'luis'@'localhost' IDENTIFIED BY 'Mestre8812#'; \
-        GRANT ALL PRIVILEGES ON *.* TO 'luis'@'localhost' WITH GRANT OPTION; \
+RUN echo "CREATE USER 'luis'IDENTIFIED BY 'Mestre8812#'; \
+        GRANT ALL PRIVILEGES ON *.* TO 'luis' WITH GRANT OPTION; \
         CREATE DATABASE projeto; \
         FLUSH PRIVILEGES;" > /tmp/script.sql
 

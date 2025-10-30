@@ -9,7 +9,7 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("Clientes")
+@Path("clientes")
 public class ClienteRecurso {
 
     @GET

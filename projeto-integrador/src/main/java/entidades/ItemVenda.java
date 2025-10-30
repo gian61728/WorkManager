@@ -2,7 +2,7 @@ package entidades;
 
 import java.security.Identity;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class ItemVenda extends PanacheEntityBase {
+public class ItemVenda extends PanacheEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
