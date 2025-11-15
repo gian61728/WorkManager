@@ -9,22 +9,26 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
+
 @Entity
-public class Venda extends PanacheEntityBase{
+public class Notificacoes extends PanacheEntityBase {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     public Integer codigo;
-    
-    public LocalDate horario;
 
-    public Double valorTotal;
+    public LocalDate data_invio;
 
-    public Double quantidadeTotal;
+    public String mensagem;
+
+    @ManyToOne
+    public Prestador prestador;
 
     @ManyToOne
     public Cliente cliente;
 
     @ManyToOne
-    public Funcionario funcionario;
+    public Chats chats;
+
 }

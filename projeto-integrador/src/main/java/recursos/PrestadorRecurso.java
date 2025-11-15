@@ -3,25 +3,25 @@ package recursos;
 import java.util.List;
 
 
-import entidades.Cliente;
+import entidades.Prestador;
 import io.quarkus.panache.common.Sort;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("clientes")
-public class ClienteRecurso {
+@Path("prestador")
+public class PrestadorRecurso {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Cliente> listar (){
+    public List<Prestador> listar(){
 
-        return Clientes.listAll("codigo");
+        return Prestador.listAll("codigo");
     }
-    @POST
+     @POST
     @Transactional
-    public void salvar (Cliente cliente){
-        cliente.persit();
-    }
+    public void salvar (Prestador prestador){
+        prestador.persit();
+}
 }

@@ -7,7 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Cliente extends PanacheEntityBase {
+public class Cliente extends PanacheEntityBase{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,5 +15,18 @@ public class Cliente extends PanacheEntityBase {
 
     public String nome;
 
+    public String telefone;
+
     public String cpf;
+
+    public String rg;
+
+    public String cidade;
+
+    public String endereco;
+
+    public String email;
+
+    public String senha;
+
 }

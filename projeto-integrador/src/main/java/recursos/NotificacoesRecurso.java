@@ -2,26 +2,26 @@ package recursos;
 
 import java.util.List;
 
+import entidades.Notificacoes;
 
-import entidades.Cliente;
 import io.quarkus.panache.common.Sort;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("clientes")
-public class ClienteRecurso {
+@Path("notificacoes")
+public class NotificacoesRecurso{
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Cliente> listar (){
+    public List<Notificacoes> listar (){
 
-        return Clientes.listAll("codigo");
+        return Notificacoes.listAll("codigo");
     }
-    @POST
+     @POST
     @Transactional
-    public void salvar (Cliente cliente){
-        cliente.persit();
+    public void salvar (Notificacoes notificacoes){
+        notificacoes.persit();
     }
 }

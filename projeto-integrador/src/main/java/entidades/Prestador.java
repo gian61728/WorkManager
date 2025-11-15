@@ -1,3 +1,4 @@
+
 package entidades;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
@@ -5,19 +6,26 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 
 @Entity
-public class ItemVenda extends PanacheEntityBase{
-
+public class Prestador extends PanacheEntityBase{
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     public Integer codigo;
 
-    public Double valorParcial;
+    public String nome;
 
-    public Double quantidadeParcial;
+    public String cpf;
 
-    @ManyToOne
-    public Produto produto;
+    public String email;
+
+    public String telefone;
+
+    public String Endereco;
+
+    public String senha;
+    
+    
 }
