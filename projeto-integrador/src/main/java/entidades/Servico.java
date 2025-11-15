@@ -8,7 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Prestador extends PanacheEntityBase{
+public class Servico extends PanacheEntityBase{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
