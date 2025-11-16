@@ -19,7 +19,7 @@ public class ClienteRecurso {
     @Produces(MediaType.APPLICATION_JSON)
     public List<Cliente> listar (){
 
-        return Clientes.listAll();
+        return Cliente.listAll();
     }
     @POST
     @Transactional
